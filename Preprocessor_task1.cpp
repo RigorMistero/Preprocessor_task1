@@ -2,11 +2,16 @@
 
 #define MODE '1'
 
-int add(int a, int b);
+#ifdef MODE '1'
+int add (int a, int b)
+{
+	return a + b;
+}
+#endif
 
 int main(int argc, char** argv)
 {
-//	std::cout << "Fuck you!" << std::endl;
+
 #ifndef MODE
 #error DEFINE MODE
 #endif 
@@ -30,9 +35,4 @@ int main(int argc, char** argv)
 #endif
 
 	return EXIT_SUCCESS;
-}
-
-int add(int a, int b)
-{
-	return a + b;
 }
