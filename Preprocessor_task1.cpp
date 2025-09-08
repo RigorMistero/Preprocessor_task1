@@ -1,6 +1,6 @@
 ﻿#include <iostream>
 
-#define MODE '1'
+#define MODE '3'
 
 #ifdef MODE '1'
 int add (int a, int b)
@@ -31,6 +31,7 @@ int main(int argc, char** argv)
 			std::cin >> num2;
 			std::cout << "Sum result: " << add(num1, num2);
 		}
+		else { std::cout << "Unknown mode. Shutdown"; return 0; }
 	} 
 #endif
 
