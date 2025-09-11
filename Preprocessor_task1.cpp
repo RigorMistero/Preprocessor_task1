@@ -1,12 +1,12 @@
 ﻿#include <iostream>
 
-#define MODE '3'
+#define MODE 0
 
-#ifdef MODE '1'
-int add (int a, int b)
-{
-	return a + b;
-}
+#if MODE == 1
+int add(int a, int b)
+	{
+		return a + b;
+	}
 #endif
 
 int main(int argc, char** argv)
@@ -18,8 +18,8 @@ int main(int argc, char** argv)
 	
 #ifdef MODE
 	{
-		if (MODE == '0') std::cout << "Training mode working";
-		else if (MODE == '1')
+		if (MODE == 0) std::cout << "Training mode working";
+		else if (MODE == 1)
 		{
 			int num1{};
 			int num2{};
